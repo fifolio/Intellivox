@@ -28,3 +28,6 @@ Combined, "Intellivox" suggests an intelligent AI assistant that excels in voice
 Additionally, the name "Voxia" sounds modern and technological, which aligns well with the idea of an advanced AI assistant. The name also has a sense of sophistication and elegance, which can help create a positive impression for users interacting with the AI assistant.
 
 Remember, the meaning and significance of a name can often be shaped by the context and perception associated with the product or service it represents. "Voxia" has the potential to evoke a sense of advanced voice-based technology, making it a suitable choice for an AI assistant with voice interaction capabilities.
+
+##
+#### Follow me on Linkedin for daily updates: [@fifolio](https://www.linkedin.com/in/fifolio/)
