@@ -36,6 +36,12 @@ Voxia will be developed as a web application with a React frontend and a backend
 - Text-to-Speech: A JavaScript library (e.g., Web Speech API) to convert text to speech.
 - ChatGPT API: The OpenAI GPT-3.5 language model API to generate responses.
 
+### Project Overview: Voxia - An AI Assistant powered by ChatGPT
+
+<img src="https://assets-global.website-files.com/59e16042ec229e00016d3a66/60b8f05f56dde86d8d147355_blog-hero_document-workflow.gif" width="100%" height="100%" />
+
+
+
 **Project Core Name: Intellivox**
 
 1. **Intelli:** Derived from "intelligent," which signifies the AI assistant's capability to understand, learn, and adapt based on user interactions. It conveys the essence of artificial intelligence and the ability to make smart decisions.
