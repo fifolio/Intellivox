@@ -89,7 +89,7 @@ Ensuring data privacy and security is of utmost importance for Voxia. The follow
 - **Privacy Policy (📜)**: A comprehensive privacy policy will be provided to users, outlining the type of data collected, its usage, and how it will be protected.
 - **User Consent (✅)**: Users will be informed about data collection and processing practices, and their explicit consent will be obtained before interacting with Voxia
 
-## Challenges and Mitigations 🛡️🛠️
+### Challenges and Mitigations 🛡️🛠️
 
 <img src="https://thumbs.gfycat.com/OldSadAmericanlobster-max-1mb.gif" width="100%" height="100%" />
 
