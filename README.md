@@ -36,11 +36,23 @@ Voxia will be developed as a web application with a React frontend and a backend
 - Text-to-Speech: A JavaScript library (e.g., Web Speech API) to convert text to speech.
 - ChatGPT API: The OpenAI GPT-3.5 language model API to generate responses.
 
-### Project Overview: Voxia - An AI Assistant powered by ChatGPT
+### User Workflow 🚀
 
 <img src="https://assets-global.website-files.com/59e16042ec229e00016d3a66/60b8f05f56dde86d8d147355_blog-hero_document-workflow.gif" width="100%" height="100%" />
 
+The user workflow of Voxia, the AI assistant powered by ChatGPT, has been thoughtfully designed to deliver a seamless and engaging conversational experience for users. When interacting with Voxia, users have the option to communicate using voice commands for their queries in the frontend interface.
 
+- **🗣️ User Interaction**: To begin the interaction, users can simply speak their queries or type them using the keyboard. This flexibility allows users to choose their preferred mode of communication, making Voxia accessible to a wide range of users.
+
+- **🎙️ Speech-to-Text Conversion**: For users opting for voice interaction, the speech-to-text library steps in to convert their spoken words into text format. This process ensures that the AI assistant can process and understand the user's input accurately.
+
+- **📡 Request Handling**: Once the text input is obtained, it is sent to the backend server for further processing. The backend, built with either Strapi or Node/Express, prepares the user's query to be processed by the powerful ChatGPT API.
+
+- **🤖 Interaction with ChatGPT**: The backend facilitates seamless interaction with the ChatGPT API, which is a cutting-edge language model capable of understanding natural language queries. The AI processes the user's input and generates a relevant and contextually appropriate response.
+
+- **📢 Text-to-Speech Conversion**: After receiving the response from the ChatGPT API, the backend sends it back to the frontend. For users who prefer voice interaction, the text-to-speech library converts the response text into speech format. This ensures that users receive the information in a natural and conversational manner.
+
+- **🎤 Response to User**: The generated response is then presented to the user through the frontend interface. Users can see the response on the screen or hear it as voice output, depending on their chosen mode of interaction.
 
 **Project Core Name: Intellivox**
 
