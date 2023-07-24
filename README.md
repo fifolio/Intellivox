@@ -89,9 +89,7 @@ Ensuring data privacy and security is of utmost importance for Voxia. The follow
 - **Privacy Policy (📜)**: A comprehensive privacy policy will be provided to users, outlining the type of data collected, its usage, and how it will be protected.
 - **User Consent (✅)**: Users will be informed about data collection and processing practices, and their explicit consent will be obtained before interacting with Voxia
 
-Certainly! Here's the continuation of the "Challenges and Mitigations" section:
-
-## 7. Challenges and Mitigations 🛡️🛠️
+## Challenges and Mitigations 🛡️🛠️
 
 <img src="https://thumbs.gfycat.com/OldSadAmericanlobster-max-1mb.gif" width="100%" height="100%" />
 
@@ -114,7 +112,7 @@ Certainly! Here's the continuation of the "Challenges and Mitigations" section:
 By being aware of these potential challenges and proactively implementing suitable mitigations, the Voxia team can build a robust and reliable AI assistant that meets user expectations and delivers a delightful experience. 🛡️🛠️🚀💬
 
 
-## 8. Conclusion 🎉🤖
+## Conclusion 🎉🤖
 
 Voxia, the AI assistant powered by ChatGPT, is poised to revolutionize the way users gather information and interact with technology. By utilizing cutting-edge technologies, maintaining stringent data privacy, and actively addressing potential challenges, Voxia will stand as a sophisticated AI assistant capable of providing valuable insights to its users. With continuous improvements and user engagement, Voxia will undoubtedly become a powerful and cherished addition to the realm of AI assistants. 🎉🤖🚀
 
