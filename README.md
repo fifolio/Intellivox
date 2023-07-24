@@ -11,7 +11,7 @@
  - ⏳ Release v1.0.0
 #
 
-### Project Overview: Voxia - An AI Assistant powered by ChatGPT
+### Project Overview: Voxia - An AI Assistant powered by ChatGPT 🤖
 
 Voxia is an AI assistant designed to gather information using natural language processing and powered by the ChatGPT language model. The primary objective of Voxia is to provide users with a seamless conversational experience where they can interact with the AI using voice commands to obtain information on various topics.
 
@@ -19,7 +19,7 @@ Voxia will be developed as a web application with a React frontend and a backend
 
 <img src="https://cdn.dribbble.com/users/1259682/screenshots/16962880/media/6734356060129abb881da81f043846f4.gif" width="100%" height="100%" />
 
-**Project Goals**
+**Project Goals 🎯**
 
 - Develop an AI assistant capable of understanding and processing natural language queries.
 - Provide an interactive and user-friendly interface for communication.
@@ -27,7 +27,7 @@ Voxia will be developed as a web application with a React frontend and a backend
 - Use the ChatGPT API to generate appropriate responses to user queries.
 - Ensure data privacy and security by following best practices.
 
-**Technology Stack**
+**Technology Stack 🛠️**
 
 - Frontend: ReactJS - A popular JavaScript library for building user interfaces.
 - Backend Option 1: Strapi - A headless CMS (Content Management System) based on Node.js.
@@ -50,9 +50,15 @@ The user workflow of Voxia, the AI assistant powered by ChatGPT, has been though
 
 - **🤖 Interaction with ChatGPT**: The backend facilitates seamless interaction with the ChatGPT API, which is a cutting-edge language model capable of understanding natural language queries. The AI processes the user's input and generates a relevant and contextually appropriate response.
 
-- **📢 Text-to-Speech Conversion**: After receiving the response from the ChatGPT API, the backend sends it back to the frontend. For users who prefer voice interaction, the text-to-speech library converts the response text into speech format. This ensures that users receive the information in a natural and conversational manner.
+- **📢 Text-to-Speech Conversion**: After receiving the response from the ChatGPT API, the backend sends it back to the frontend. For users who prefer voice interaction, the text-to-speech library converts the response text into a speech format. This ensures that users receive the information in a natural and conversational manner.
 
 - **🎤 Response to User**: The generated response is then presented to the user through the frontend interface. Users can see the response on the screen or hear it as voice output, depending on their chosen mode of interaction.
+
+  
+### Data Privacy and Security 🔒
+
+<img src="https://media.licdn.com/dms/image/C4E12AQGXDsd3bK-zRQ/article-cover_image-shrink_600_2000/0/1623833891372?e=2147483647&v=beta&t=C2PKtDENAFXq6UijBuhHVdjOcjmWJZ6cbJxHEw-ZUzw" width="100%" height="100%" />
+
 
 **Project Core Name: Intellivox**
 
