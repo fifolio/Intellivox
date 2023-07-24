@@ -15,9 +15,17 @@
 
 Voxia is an AI assistant designed to gather information using natural language processing and powered by the ChatGPT language model. The primary objective of Voxia is to provide users with a seamless conversational experience where they can interact with the AI using voice commands to obtain information on various topics.
 
-Voxia will be developed as a web application with a React frontend and a backend built using Strapi or Node/Express. The front end will enable users to communicate with Voxia through a simple and intuitive interface, while the back end will handle processing the user's input and generating responses using the ChatGPT API.
+Voxia will be developed as a web application with a React frontend and a backend built using Strapi & Node/Express. The front end will enable users to communicate with Voxia through a simple and intuitive interface, while the back end will handle processing the user's input and generating responses using the ChatGPT API.
 
 <img src="https://cdn.dribbble.com/users/1259682/screenshots/16962880/media/6734356060129abb881da81f043846f4.gif" width="100%" height="100%" />
+
+**Project Goals**
+
+- Develop an AI assistant capable of understanding and processing natural language queries.
+- Provide an interactive and user-friendly interface for communication.
+- Integrate speech-to-text and text-to-speech capabilities to enable voice interactions.
+- Use the ChatGPT API to generate appropriate responses to user queries.
+- Ensure data privacy and security by following best practices.
 
 **Project Core Name: Intellivox**
 
