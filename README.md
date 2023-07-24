@@ -57,7 +57,7 @@ The user workflow of Voxia, the AI assistant powered by ChatGPT, has been though
   
 ### Data Privacy and Security 🔒
 
-<img src="https://media.licdn.com/dms/image/C4E12AQGXDsd3bK-zRQ/article-cover_image-shrink_600_2000/0/1623833891372?e=2147483647&v=beta&t=C2PKtDENAFXq6UijBuhHVdjOcjmWJZ6cbJxHEw-ZUzw" width="100%" height="100%" />
+<img src="https://stemettes.org/zine/wp-content/uploads/sites/3/2021/09/13d79c62-bf64-42a5-b1e0-3bba1acf8f9b_rw_1200.gif" width="100%" height="100%" />
 
 
 **Project Core Name: Intellivox**
