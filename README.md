@@ -11,7 +11,7 @@
  - ⏳ Release v1.0.0
 #
 
-#### **Project Overview: Voxia - An AI Assistant powered by ChatGPT**
+#### Project Overview: Voxia - An AI Assistant powered by ChatGPT
 
 Voxia is an AI assistant designed to gather information using natural language processing and powered by the ChatGPT language model. The primary objective of Voxia is to provide users with a seamless conversational experience where they can interact with the AI using voice commands to obtain information on various topics.
 
