@@ -6,14 +6,6 @@
     "module": "ESNext",
     "skipLibCheck": true,
 
-    "compilerOptions": {
-      "target": "esnext",
-      "module": "esnext",
-      "jsx": "react",
-      "strict": true,
-      "esModuleInterop": true,
-      "types": ["react"]
-
     /* Bundler mode */
     "moduleResolution": "bundler",
     "allowImportingTsExtensions": true,
