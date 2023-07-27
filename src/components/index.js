@@ -1,0 +1,1 @@
+export { default as Voxia } from './Voxia/Voxia.jsx';
