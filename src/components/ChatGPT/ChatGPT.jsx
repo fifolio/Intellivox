@@ -1,31 +1,12 @@
-import { useState } from 'react';
-import axios from 'axios';
+/* eslint-disable react/prop-types */
+// import { createContext } from "react"
+import { useContext } from "react";
+import MainContext from "../MainContext";
 
-export default function ChatGPT() {
+export default function ChatGPT({prompt}) {
 
-    const [prompt, setPrompt] = useState("");
-    const [response, setResponse] = useState("");
+    const { setResponse } = useContext(MainContext);
+    setResponse(prompt);
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
-
-        axios.post("http://localhost:4000/chat", {prompt})
-        .then((res) => {
-            setResponse(res.data)
-        })
-        .catch((err) => {
-            console.log(err)
-        })
-    }
-
-    return (
-        <>
-            <form onSubmit={handleSubmit}>
-                <input type="text" value={prompt} onChange={(e) => setPrompt(e.target.value)} />
-                <button type="submit">Submit</button>
-            </form>
-
-            <div className="res">{response}</div>
-        </>
-    )
-} 
+    return null
+}
