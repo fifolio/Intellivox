@@ -1,5 +1,5 @@
-import { useState } from "react";
-import ChatGPT from "../ChatGPT/ChatGPT";
+import { useEffect, useState } from "react";
+import ChatGPT from "../ChatGPT/chatGPT";
 
 const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
 const recognition = new SpeechRecognition();
@@ -8,25 +8,40 @@ recognition.interimResults = true;
 
 export default function SpeechRec() {
     const [isListening, setIsListening] = useState(false);
-    const [transcript, setTranscript] = useState("");
+    const [tempTranscript, setTempTranscript] = useState("");
+    const [input, setInput] = useState("");
+
+    // ----------------- 
 
     const handleStartStop = () => {
         if (!isListening) {
-            recognition.start();
             setIsListening(true);
+            recognition.start();
         } else {
-            recognition.stop();
             setIsListening(false);
+            recognition.stop();
         }
     };
 
-    recognition.onresult = (event) => {
-        const currentTranscript = Array.from(event.results)
-            .map((result) => result[0].transcript)
-            .join("");
+    useEffect(() => {
+        recognition.onresult = (event) => {
+            const currentTranscript = Array.from(event.results).map((result) => result[0].transcript).join("");
+            setTempTranscript(currentTranscript);
+        };
 
-        setTranscript(currentTranscript);
-    };
+        // Clean up the recognition on unmount
+        return () => {
+            recognition.onresult = null;
+        };
+    }, [tempTranscript]);
+
+
+    useEffect(() => {
+        if (!isListening) {
+            setInput(tempTranscript); // Update the input state after the user stops speaking
+            setTempTranscript(""); // Reset the temporary transcript for future use
+        }
+    }, [isListening]);
 
     return (
         <div>
@@ -38,14 +53,13 @@ export default function SpeechRec() {
                 <textarea
                     rows="6"
                     cols="50"
-                    value={transcript}
+                    value={tempTranscript}
                     onChange={() => { }}
                     placeholder="Spoken words will appear here..."
                 />
             </div>
 
-            {isListening ? '' : <ChatGPT prompt={transcript} />} 
-
+            <ChatGPT input={input} />
         </div>
-    );
+    )
 }
