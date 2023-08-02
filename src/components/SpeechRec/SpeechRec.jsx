@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import ChatGPT from "../ChatGPT/chatGPT.jsx";
+import ChatGPT from "../ChatGPT/ChatGPT.jsx";
 
 const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
 const recognition = new SpeechRecognition();
