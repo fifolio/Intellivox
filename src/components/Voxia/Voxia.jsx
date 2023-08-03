@@ -21,10 +21,10 @@ export default function Voxia() {
                 'X-RapidAPI-Host': 'text-to-speech-api3.p.rapidapi.com'
             },
             responseType: 'arraybuffer', // Set the response type to 'arraybuffer'
-            pitch: 2,   // Set the pitch to 0.8
-            rate: 2.9,    // Increase the speech rate to 1.2
-            voice: 'en-US',  // Specify a particular voice, if supported
-            volume: 1,     // Adjust the volume to 0.7
+            pitch: 4,   
+            rate: 4,    
+            voice: 'en-US',  
+            volume: 2,    
         };
 
         try {
@@ -48,7 +48,10 @@ export default function Voxia() {
     return (
         <>
             <div className="speech">
-                {audioUrl && <audio autoPlay="true" controls src={audioUrl}></audio>}
+                {audioUrl && <audio
+                    autoPlay={response !== ""}
+                    controls={response !== ""}
+                    src={audioUrl}></audio>}
             </div>
             <h1>{response}</h1>
         </>
