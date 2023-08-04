@@ -1,7 +1,7 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import { useContext, useEffect, useState } from "react";
 import MainContext from "../MainContext";
-import './Voxia.scss';
+import './voxia.scss';
 
 export default function Voxia() {
 
@@ -39,11 +39,11 @@ export default function Voxia() {
 
         if(response && voice ){
             setTimeout(() => {
-                console.log("✅ Voxia talking...");
+                console.log("Voxia talking...");
                 handlePlay(response, voice, pitch, rate, volume)
-            }, 50);
+            }, 150);
         } else {
-            console.log("=> Voxia cant talk, Waiting for Response/Input");
+            console.log("Voxia cant talk, Waiting for Response/Input");
         }
     }, [response, voice]);
 
