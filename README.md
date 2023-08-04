@@ -1,9 +1,9 @@
 # Intellivox
 
 #### Project current stage
- - 👨‍💻 Laboratory  
+ - 👨‍💻 Development  
 #### Next Stage
- - ⏳ Factory 
+ - ⏳ Designing 
 #### Upcoming stages
  - ⏳ Test beta
  - ⏳ Production
@@ -120,3 +120,4 @@ Voxia, the AI assistant powered by ChatGPT, is poised to revolutionize the way u
 
 ##
 #### Follow me on Linkedin for daily updates or if you have any questions and suggestions: [@fifolio](https://www.linkedin.com/in/fifolio/)
+#### Keep up with the latest updates of the Interllivox Project here: [Read Updates](https://www.linkedin.com/feed/hashtag/?keywords=intellivoxproject)
