@@ -1,7 +1,7 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import { useContext, useEffect, useState } from "react";
 import MainContext from "../MainContext";
-import './voxia.scss';
+// import './voxia.scss';
 
 export default function Voxia() {
 
@@ -59,7 +59,7 @@ export default function Voxia() {
                 </select>
                 <span onClick={handlePlay}></span>
             </div>
-
+            version 1
             {response}
         </div>
     )
