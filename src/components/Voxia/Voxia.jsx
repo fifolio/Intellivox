@@ -1,59 +1,67 @@
 // import axios from 'axios';
-import axios from 'axios'
 import { useContext, useEffect, useState } from "react";
 import MainContext from "../MainContext";
+import './voxia.scss';
 
 export default function Voxia() {
+
     const { response } = useContext(MainContext);
-    const [audioUrl, setAudioUrl] = useState(null);
 
-    const runVoxia = async () => {
-
-        const options = {
-            method: 'GET',
-            url: 'https://text-to-speech-api3.p.rapidapi.com/speak',
-            params: {
-                text: `'${response}'`,
-                lang: 'en'
-            },
-            headers: {
-                'X-RapidAPI-Key': '0719995d05msh8c45fba8fd2223dp171cb7jsne70c34185e05',
-                'X-RapidAPI-Host': 'text-to-speech-api3.p.rapidapi.com'
-            },
-            responseType: 'arraybuffer', // Set the response type to 'arraybuffer'
-            pitch: 4,   
-            rate: 4,    
-            voice: 'en-US',  
-            volume: 2,    
-        };
-
-        try {
-            const speech = await axios.request(options);
-            const audioData = speech.data;
-            const audioBlob = new Blob([audioData], {
-                type: 'audio/mpeg',
-            });
-            const audioUrl = URL.createObjectURL(audioBlob);
-            setAudioUrl(audioUrl)
-        } catch (error) {
-            console.error(error);
-        }
-    }
+    // const [input, setInput] = useState(null);
+    const [voice, setVoice] = useState(null);
+    const [pitch] = useState(1.1);
+    const [rate] = useState(1);
+    const [volume] = useState(1);
 
     useEffect(() => {
-        runVoxia()
-    }, [response])
+        const synth = window.speechSynthesis;
+        const voices = synth.getVoices();
+        setVoice(voices[5]);
+    }, []);
 
+    // handle the play button
+    const handlePlay = (input, voice, pitch, rate, volume) => {
+        const synth = window.speechSynthesis;
+        const inpt = new SpeechSynthesisUtterance(input)
+        inpt.voice = voice;
+        inpt.pitch = pitch;
+        inpt.rate = rate;
+        inpt.volume = volume;
+        synth.speak(inpt);
+    };
+  
+  
+  const handleVoiceChange = (event) => {
+        const voices = window.speechSynthesis.getVoices();
+        setVoice(voices.find((v) => v.name === event.target.value));
+    };
+
+    useEffect(() => {
+
+        if(response && voice ){
+            setTimeout(() => {
+                console.log("✅ Voxia talking...");
+                handlePlay(response, voice, pitch, rate, volume)
+            }, 50);
+        } else {
+            console.log("⚠ Voxia cant talk, Waiting for Response/Input");
+        }
+    }, [response, voice]);
 
     return (
-        <>
-            <div className="speech">
-                {audioUrl && <audio
-                    autoPlay={response !== ""}
-                    controls={response !== ""}
-                    src={audioUrl}></audio>}
+        <div className="voxia">
+            <div className="hidden">
+                <select value={voice?.name} onChange={handleVoiceChange}>
+                    {window.speechSynthesis.getVoices().map((voice) => (
+                        <option key={voice.name} value={voice.name}>
+                            {voice.name}
+                        </option>
+                    ))}
+                </select>
+                <span onClick={handlePlay}></span>
             </div>
-            <h1>{response}</h1>
-        </>
+            
+            {response}
+        </div>
     )
 }
