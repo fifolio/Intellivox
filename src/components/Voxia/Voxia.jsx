@@ -7,7 +7,6 @@ export default function Voxia() {
 
     const { response } = useContext(MainContext);
 
-    // const [input, setInput] = useState(null);
     const [voice, setVoice] = useState(null);
     const [pitch] = useState(1.1);
     const [rate] = useState(1);
@@ -29,16 +28,16 @@ export default function Voxia() {
         inpt.volume = volume;
         synth.speak(inpt);
     };
-  
-  
-  const handleVoiceChange = (event) => {
+
+
+    const handleVoiceChange = (event) => {
         const voices = window.speechSynthesis.getVoices();
         setVoice(voices.find((v) => v.name === event.target.value));
     };
 
     useEffect(() => {
 
-        if(response && voice ){
+        if (response && voice) {
             setTimeout(() => {
                 console.log("✅ Voxia talking...");
                 handlePlay(response, voice, pitch, rate, volume)
@@ -60,7 +59,7 @@ export default function Voxia() {
                 </select>
                 <span onClick={handlePlay}></span>
             </div>
-            
+
             {response}
         </div>
     )
