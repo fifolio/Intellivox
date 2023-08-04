@@ -1,4 +1,4 @@
-// import axios from 'axios';
+/* eslint-disable react-hooks/exhaustive-deps */
 import { useContext, useEffect, useState } from "react";
 import MainContext from "../MainContext";
 import './voxia.scss';
@@ -28,22 +28,22 @@ export default function Voxia() {
         inpt.volume = volume;
         synth.speak(inpt);
     };
-
-
-    const handleVoiceChange = (event) => {
+  
+  
+  const handleVoiceChange = (event) => {
         const voices = window.speechSynthesis.getVoices();
         setVoice(voices.find((v) => v.name === event.target.value));
     };
 
     useEffect(() => {
 
-        if (response && voice) {
+        if(response && voice ){
             setTimeout(() => {
                 console.log("✅ Voxia talking...");
                 handlePlay(response, voice, pitch, rate, volume)
             }, 50);
         } else {
-            console.log("⚠ Voxia cant talk, Waiting for Response/Input");
+            console.log("=> Voxia cant talk, Waiting for Response/Input");
         }
     }, [response, voice]);
 
