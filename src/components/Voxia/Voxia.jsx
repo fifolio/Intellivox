@@ -1,7 +1,7 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import { useContext, useEffect, useState } from "react";
 import MainContext from "../MainContext";
-// import './voxia.scss';
+import './Voxia.scss';
 
 export default function Voxia() {
 
