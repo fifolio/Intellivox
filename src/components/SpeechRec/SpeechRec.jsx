@@ -45,7 +45,7 @@ export default function SpeechRec() {
 
     return (
         <div>
-            <h1>Speech Recognition App</h1>
+            <h1>Voxia, the AI Assistant</h1>
             <button onClick={handleStartStop}>
                 {isListening ? "Stop Listening" : "Start Listening"}
             </button>
