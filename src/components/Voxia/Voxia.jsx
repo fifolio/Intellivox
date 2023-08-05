@@ -58,7 +58,7 @@ export default function Voxia() {
                     ))}
                 </select>
             </div>
-                <button onClick={handlePlay}>play</button>
+                <button onClick={handlePlay(response, voice, pitch, rate, volume)}>play</button>
                 <p>V201</p>
             {response}
         </div>
