@@ -57,8 +57,9 @@ export default function Voxia() {
                         </option>
                     ))}
                 </select>
-                <span onClick={handlePlay}></span>
             </div>
+                <button onClick={handlePlay}>play</button>
+                <p>V201</p>
             {response}
         </div>
     )
