@@ -1,65 +1,30 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import { useContext, useEffect, useState } from "react";
+import { useEffect, useState, useContext } from "react";
 import MainContext from "../MainContext";
+import {useSpeechSynthesis} from 'react-speech-kit'
 import './Voxia.scss';
 
 export default function Voxia() {
 
     const { response } = useContext(MainContext);
+    const {speak} = useSpeechSynthesis();
 
-    const [voice, setVoice] = useState(null);
-    const [pitch] = useState(1.1);
-    const [rate] = useState(1);
-    const [volume] = useState(1);
+    const handleClick = () => {
+        speak({
+            text: response
+        })
+    }
 
-    useEffect(() => {
-        const synth = window.speechSynthesis;
-        const voices = synth.getVoices();
-        setVoice(voices[5]);
-    }, []);
+    useEffect(() => {handleClick()} ,[response])
 
-    // handle the play button
-    const handlePlay = (input, voice, pitch, rate, volume) => {
-        const synth = window.speechSynthesis;
-        const inpt = new SpeechSynthesisUtterance(input)
-        inpt.voice = voice;
-        inpt.pitch = pitch;
-        inpt.rate = rate;
-        inpt.volume = volume;
-        synth.speak(inpt);
-    };
-  
-  
-  const handleVoiceChange = (event) => {
-        const voices = window.speechSynthesis.getVoices();
-        setVoice(voices.find((v) => v.name === event.target.value));
-    };
-
-    useEffect(() => {
-
-        if(response && voice ){
-            setTimeout(() => {
-                console.log("Voxia talking...");
-                handlePlay(response, voice, pitch, rate, volume)
-            }, 150);
-        } else {
-            console.log("Voxia cant talk, Waiting for Response/Input");
-        }
-    }, [response, voice]);
 
     return (
         <div className="voxia">
             <div className="hidden">
-                <select value={voice?.name} onChange={handleVoiceChange}>
-                    {window.speechSynthesis.getVoices().map((voice) => (
-                        <option key={voice.name} value={voice.name}>
-                            {voice.name}
-                        </option>
-                    ))}
-                </select>
+                
             </div>
-                <button onClick={handlePlay(response, voice, pitch, rate, volume)}>play</button>
-                <p>V202</p>
+            <button onClick={()=> handleClick()}>play</button>
+            <p>V210</p>
             {response}
         </div>
     )
