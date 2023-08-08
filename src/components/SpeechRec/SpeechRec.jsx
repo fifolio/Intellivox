@@ -15,7 +15,7 @@ export default function SpeechRec() {
         <div>
             <h1>Voixa, </h1>
 
-            <textarea value={input} onChange={(e) => setInput(e.target.value)} />
+            <textarea value={input} />
             <button onClick={listen}>Talk</button>
             <button onClick={stop}>Stop</button>
 
