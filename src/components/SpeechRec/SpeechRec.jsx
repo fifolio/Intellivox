@@ -1,11 +1,11 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { useSpeechRecognition } from 'react-speech-kit';
 import ChatGPT from "../ChatGPT/ChatGPT.jsx";
 
 export default function SpeechRec() {
-    
+
     const [input, setInput] = useState("");
-    const {listen, listening, stop} = useSpeechRecognition({
+    const { listen, listening, stop } = useSpeechRecognition({
         onResult: (result) => {
             setInput(result)
         }
@@ -15,13 +15,13 @@ export default function SpeechRec() {
         <div>
             <h1>Voixa, </h1>
 
-            <textarea value={input} />
+            <textarea value={input} rows="20" onChange={(e) => setInput(e.target.value)} />
             <button onClick={listen}>Talk</button>
             <button onClick={stop}>Stop</button>
+            {listening ? <div><p>Go ahead I am listening</p></div> : <ChatGPT input={input} />}
 
-            {listening && <div>Go ahead I'm listening</div>}
 
-            <ChatGPT input={input} />
+
         </div>
     )
 }
