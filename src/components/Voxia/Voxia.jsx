@@ -20,6 +20,11 @@ export default function Voxia() {
             voice: voice,
             rate: 1.4,
             pitch: 2,
+            default: true,
+            lang: "en-US",
+            localService: true,
+            name: "Zira",
+            voiceURI: "Zira",
         })
     }
 
@@ -45,7 +50,7 @@ export default function Voxia() {
                     </select>
                 </div>
             </div>
-            <p>V600</p>
+            <p>V650</p>
             {response}
         </div>
     )
