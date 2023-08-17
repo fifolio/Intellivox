@@ -1,65 +1,60 @@
 import { useEffect, useState } from "react";
+import { useSpeechRecognition } from 'react-speech-kit';
 import ChatGPT from "../ChatGPT/ChatGPT.jsx";
 
-const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
-const recognition = new SpeechRecognition();
-recognition.continuous = true;
-recognition.interimResults = true;
-
 export default function SpeechRec() {
-    const [isListening, setIsListening] = useState(false);
-    const [tempTranscript, setTempTranscript] = useState("");
+
+    const [tempInput, setTempInput] = useState("");
     const [input, setInput] = useState("");
 
-    // ----------------- 
 
-    const handleStartStop = () => {
-        if (!isListening) {
-            setIsListening(true);
-            recognition.start();
+    const { listen, listening, stop } = useSpeechRecognition({
+        onResult: (result) => {
+            setTempInput(result)
+        }
+    })
+
+    useEffect(() => {
+        
+        let timeoutId;
+
+        if (listening) {
+            // If still listening, set a timeout to update the input after a delay
+            timeoutId = setTimeout(() => {
+                setInput(tempInput);
+                stop()
+            }, 3000); // Adjust the timeout value as needed
         } else {
-            setIsListening(false);
-            recognition.stop();
+            // If not listening, immediately update the input
+            setInput(tempInput);
         }
-    };
 
-    useEffect(() => {
-        recognition.onresult = (event) => {
-            const currentTranscript = Array.from(event.results).map((result) => result[0].transcript).join("");
-            setTempTranscript(currentTranscript);
-        };
-
-        // Clean up the recognition on unmount
+        // Clear the timeout when the component unmounts or tempInput changes
         return () => {
-            recognition.onresult = null;
+            clearTimeout(timeoutId);
         };
-    }, [tempTranscript]);
+    }, [tempInput, listening]);
 
+    console.log(input);
 
-    useEffect(() => {
-        if (!isListening) {
-            setInput(tempTranscript); // Update the input state after the user stops speaking
-            setTempTranscript(""); // Reset the temporary transcript for future use
-        }
-    }, [isListening]);
+    // const callVoxia = () => {
+    //     setInput(`${import.meta.env.VITE_WELCOME_MESSAGE}`);
+    //     setTimeout(() => {
+    //     }, 15000);
+    // }
 
     return (
         <div>
-            <h1>Voxia, the AI Assistant</h1>
-            <button onClick={handleStartStop}>
-                {isListening ? "Stop Listening" : "Start Listening"}
-            </button>
-            <div>
-                <textarea
-                    rows="6"
-                    cols="50"
-                    value={tempTranscript}
-                    onChange={() => { }}
-                    placeholder="Spoken words will appear here..."
-                />
-            </div>
+            <h1>Voixa, </h1>
 
-            <ChatGPT input={input} />
+            <textarea value={input} rows="20" onChange={(e) => setInput(e.target.value)} />
+            {/* <button onClick={callVoxia}>Start Calling Voxia</button> */}
+            <button onClick={listen}>Call Voxia</button>
+            <button onClick={stop}>End Call</button>
+            {listening ? <div><p>Go ahead I am listening</p></div> : <ChatGPT input={input} />}
+
+
+
         </div>
     )
 }

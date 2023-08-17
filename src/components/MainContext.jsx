@@ -1,6 +1,6 @@
 import { createContext } from 'react';
 const MainContext = createContext({
     response: "",
-    setResponse: () => { }
+    setResponse: () => { },
 });
 export default MainContext;
