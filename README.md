@@ -1,4 +1,4 @@
-# Intellivox
+# Intellivox 
 
 #### Project current stage
  - 👨‍💻 Development  
