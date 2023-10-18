@@ -1,6 +1,6 @@
 # Intellivox 
    
-#### Project current stage  
+#### Project current stage   
  - 👨‍💻 Development      
 #### Next Stage  
  - ⏳ Designing    
