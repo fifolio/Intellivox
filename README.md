@@ -6,7 +6,7 @@
  - ⏳ Designing      
 #### Upcoming stages  
  - ⏳ Test beta     
- - ⏳ Production    
+ - ⏳ Production     
  - ⏳ Test version 1.0.0  
  - ⏳ Release v1.0.0    
 # 
