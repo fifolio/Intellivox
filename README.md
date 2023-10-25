@@ -3,7 +3,7 @@
 #### Project current stage   
  - 👨‍💻 Development      
 #### Next Stage  
- - ⏳ Designing      
+ - ⏳ Designing       
 #### Upcoming stages  
  - ⏳ Test beta     
  - ⏳ Production     
