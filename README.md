@@ -7,7 +7,7 @@
 #### Upcoming stages  
  - ⏳ Test beta     
  - ⏳ Production     
- - ⏳ Test version 1.0.0  
+ - ⏳ Test version 1.0.0   
  - ⏳ Release v1.0.0     
 # 
  
